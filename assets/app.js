@@ -6,7 +6,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav?.classList.cont
 nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
 document.addEventListener('click',e=>{if(!e.target.closest('.header'))closeMenu();});
 const cards=[...document.querySelectorAll('[data-category]')],filters=[...document.querySelectorAll('[data-filter]')];
-filters.forEach(b=>b.addEventListener('click',()=>{filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));let count=0;cards.forEach(c=>{c.hidden=b.dataset.filter!=='all'&&c.dataset.category!==b.dataset.filter;if(!c.hidden)count++;});const status=document.querySelector('#project-count');if(status)status.textContent=`${count.toLocaleString('ar-SA')} أعمال معروضة`;}));
+filters.forEach(b=>b.addEventListener('click',()=>{filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));let count=0;cards.forEach(c=>{c.hidden=b.dataset.filter!=='all'&&c.dataset.category!==b.dataset.filter;if(!c.hidden)count++;});const status=document.querySelector('#project-count');if(status)status.textContent=`عدد الأعمال: ${count.toLocaleString('ar-SA')}`;}));
 const dialog=document.querySelector('.zoom-dialog'),zoom=document.querySelector('.zoom-button');
 zoom?.addEventListener('click',()=>{dialog?.showModal();document.body.classList.add('modal-open');});
 dialog?.querySelector('.dialog-close')?.addEventListener('click',()=>dialog.close());
