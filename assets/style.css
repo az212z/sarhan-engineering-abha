@@ -7,3 +7,4 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.motion-ready .reveal{opacity:1;transform:none}}
 
 .wa-float img{filter:brightness(0) invert(1)}
+@media(max-width:760px){.cinema .hero .actions{display:grid;grid-template-columns:1fr 1fr}.cinema .hero .btn{padding:13px 10px;gap:10px;font-size:13px}}@media(max-width:360px){.cinema .hero .actions{grid-template-columns:1fr}}
